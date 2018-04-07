@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Account Information</h2>
+
+<form action="/action_page.php">
+  Title:<br>
+  <select name="title">
+     <option value="Mr">Mr.</option>
+    <option value="Ms">Ms.</option>
+    <option value="Jr.">Jr.</option>
+    <option value="Sr.">Sr.</option>
+  </select>	
+  <br>
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Middle name:<br>
+  <input type="text" name="middlename">
+  <br>  
+  Last name:<br>
+  <input type="text" name="lastname">
+  <br><br>
+  Address 1:<br>
+  <input type="text" name="address1">
+  <br><br>
+  Address 2:<br>
+  <input type="text" name="address2">
+  <br><br>
+  Phone No:<br>
+  <input type="text" name="phno">
+  <br><br>
+  Employer:<br>
+  <input type="text" name="employer">
+  <br><br> 
+  Account Type:<br>
+  <select name="aType">
+     <option value="chk">Checkings</option>
+     <option value="sav">Savings</option>
+	 <option value="loan">Loan</option>
+	 <option value="ccard">CreditCard</option>
+  </select>	
+  <br><br>   
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>

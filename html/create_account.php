@@ -9,7 +9,8 @@
 	$use_query = "USE ece524_proj;";	
 	$result = $conn->query($use_query);
 	$insert_attempt = "SELECT * FROM UserInfo where username='". $username . "'";
-	if($conn->query($insert_attempt) == TRUE)
+	$result = $conn->query($insert_attempt);
+	if($result->num_rows > 0)
 	{
 		echo $username . " already exists in the database. Please go back and try another username.";
 		echo "<br>";
@@ -41,7 +42,5 @@
 		}
 		$select_result->close();
 	}
-
-	$result->close();
 
 ?>

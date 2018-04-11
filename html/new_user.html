@@ -1,8 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Login Page</title>
+<title>Create Username and Password</title>
 <style>
 /* Basics */
 html, body {
@@ -15,9 +12,9 @@ html, body {
 }
 #container {
     position: fixed;
-    width: 340px;
-    height: 280px;
-    top: 50%;
+    width: 400px;
+    height: 500px;
+    top: 30%;
     left: 50%;
     margin-top: -140px;
     margin-left: -170px;
@@ -25,7 +22,6 @@ html, body {
     border-radius: 3px;
     border: 1px solid #ccc;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-
 }
 form {
     margin: 0 auto;
@@ -106,7 +102,7 @@ input[type=submit] {
     float: right;
     margin-right: 20px;
     margin-top: 20px;
-    width: 80px;
+    width: 100px;
     height: 30px;
     font-size: 14px;
     font-weight: bold;
@@ -131,24 +127,30 @@ input[type=submit]:active {
     background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
 </style>
-
 </head>
 
 <body>
 
     <!-- Begin Page Content -->
     <div id="container">
-        <form action="process_login.php" method="post">
-            <label for="loginmsg" style="color:hsla(0,100%,50%,0.5); font-family:"Helvetica Neue",Helvetica,sans-serif;"><?php  echo @$_GET['msg'];?></label>
+    	<h2>Account Creation Form</h2>
+        <form action="create_account.php" method="post">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname">
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
             <div id="lower">
-		<input name="action" type="submit" value="Login">
-		<input name="action" type="submit" value="New User">
+		<input name="action" type="submit" value="Create User">
+		<input name="action" type="submit" value="Cancel">
             </div><!--/ lower-->
-        </form>
+    	</form>
     </div><!--/ container-->
     <!-- End Page Content -->
 </body>

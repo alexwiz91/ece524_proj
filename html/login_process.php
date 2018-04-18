@@ -20,7 +20,7 @@
 	}
 	else
 	{
-		echo "FAILURE!!!!";
+		echo "INVALID USERNAME/PASSWORD!";
 	}
 //	if($result->num_rows > 0)
 //	{

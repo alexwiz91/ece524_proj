@@ -36,15 +36,23 @@ tr:nth-child(even) {
   <input type="submit" value="Submit">  
   </span>
   <br><br>
-  Account No:<br>
-  <input type="text" name="accno" value="<?php echo $_SESSION['USERDATA']['password']; ?>"/> 
+  First Name: 
+  <label><?php echo $_SESSION['USERDATA']['FirstName']; ?></label> 
   <br><br>
-  Routing No:<br>
+  Last Name: 
+  <label><?php echo $_SESSION['USERDATA']['LastName']; ?></label> 
+  <br><br>
+  Account No: 
+  <label><?php echo $_SESSION['USERDATA']['AccNum']; ?></label> 
+  <br><br>
+  Example Input Box:<br>
   <input type="text" name="rout">
   <br><br>  
-  Available Balance:<br>
-  <input type="text" name="balance">
+  Available Checking Balance:
+  <label><?php echo $_SESSION['USERDATA']['checkingBalance']; ?></label> 
   <br><br>
+  Available Savings Balance:
+  <label><?php echo $_SESSION['USERDATA']['savingsBalance']; ?></label> 
  </fieldset> 
   
 <fieldset>

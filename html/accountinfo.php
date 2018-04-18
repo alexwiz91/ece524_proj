@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+?>
 <html>
 <body>
 <style>
@@ -34,7 +37,7 @@ tr:nth-child(even) {
   </span>
   <br><br>
   Account No:<br>
-  <input type="text" name="accno">
+  <input type="text" name="accno" value="<?php echo $_SESSION['USERDATA']['password']; ?>"/> 
   <br><br>
   Routing No:<br>
   <input type="text" name="rout">

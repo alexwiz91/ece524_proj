@@ -55,13 +55,13 @@ tr:nth-child(even) {
   <input type="text"name="lname" value="<?php echo $_SESSION['USERDATA']['LastName']; ?>"></input> 
   <br><br>
   Street:
-  <input type="text"name="housenumber" value="<?php echo $_SESSION['USERDATA']['HouseNumber']; ?>"></input> 
+  <input type="text"name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNum']; ?>"></input> 
   <input type="text"name="street" value="<?php echo $_SESSION['USERDATA']['Street']; ?>"></input> 
-  <br>
-  City:&nbsp;&nbsp; &nbsp;     
-  <input type="text"name="city"><?php echo $_SESSION['USERDATA']['City']; ?></input> 
+  <br><br>
+  City:    
+  <input type="text"name="city" value ="<?php echo $_SESSION['USERDATA']['City']; ?>"</input> 
   State: 
-  <input size=14 type="text"name="state"><?php echo $_SESSION['USERDATA']['State']; ?></input> 
+  <input type="text"name="state" size = "3" value ="<?php echo $_SESSION['USERDATA']['State']; ?>"</input> 
   <br><br>
   Example Input Box:<br>
   <input type="text" name="rout">

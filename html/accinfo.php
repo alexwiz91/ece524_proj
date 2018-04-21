@@ -42,7 +42,7 @@ tr:nth-child(even) {
 }
 </style>
 <fieldset>
-  <legend style="font-family:sans-serif;">Account Information:</legend>
+  <legend style="font-family:sans-serif;">Update Account Information:</legend>
 
 <form style="font-family:sans-serif;" action="save_info.php" method="post">
   Account No: 

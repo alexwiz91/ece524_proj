@@ -15,7 +15,7 @@
 		echo "SUCCESS, you should redirect now <br>";
 		$row = $result->fetch_assoc();
 		$_SESSION['USERDATA'] = $row;
-		header('Location: accountinfo.php');
+		header('Location: mainpage.php');
 		exit();
 	}
 	else

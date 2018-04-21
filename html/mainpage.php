@@ -5,6 +5,27 @@
 <html>
 <body>
 <style>
+button {
+    display: inline-block;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 30px;
+}
+
+#close-image img {
+    display: block;
+    height: 20px;  
+    width: 20px;
+}
+
+#close-CSS {
+    background-image: url( 'img/settings.png')
+    background-size: 100px 130px;
+    height: 134px;  
+    width: 104px;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -34,6 +55,9 @@ tr:nth-child(even) {
   
   <span>
   <input type="submit" value="Submit">  
+  </span>
+  <span>
+<button id="close-image" formaction="accinfo.php" method="post"><img src="img/settings.png"></button>
   </span>
   <br><br>
   First Name: 

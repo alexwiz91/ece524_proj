@@ -71,12 +71,13 @@ tr:nth-child(even) {
   <br><br>
   Example Input Box:<br>
   <input type="text" name="rout">
-  <br><br>  
+<!--  <br><br>  
   Available Checking Balance:
   <label><?php echo $_SESSION['USERDATA']['checkingBalance']; ?></label> 
   <br><br>
   Available Savings Balance:
   <label><?php echo $_SESSION['USERDATA']['savingsBalance']; ?></label> 
+  -->
  </fieldset> 
   
 <fieldset>
@@ -94,26 +95,39 @@ tr:nth-child(even) {
 	$sql_query = "SELECT * from Transactions where AccNum='" . $_SESSION['USERDATA']['AccNum'] . "';";
 	$result = $conn->query($sql_query);
 	$currBalance = $_SESSION['USERDATA']['checkingBalance'];
+	$firstBalance = $currBalance;
+	$resultsArray = array();
 	if($result->num_rows>0)
 	{
-		while($row = $result->fetch_assoc())
+		while($row = $result->fetch_assoc())	
 		{
-			$currBalance = $currBalance + $row['TransactionAmt'];
+			$resultsArray[] = array('Vendor' => $row['Vendor'], 'TransactionAmt' => $row['TransactionAmt']);
+			$firstBalance = $firstBalance + $row['TransactionAmt'];
+		}
+		$sizeArr = count($resultsArray);
+		echo "<tr>";
+		echo "<td></td>";
+		echo "<td><span style=\"font-weight:bold\">Current Balance:</span> </td>";
+		echo "<td><span style=\"font-weight:bold\">" . $firstBalance . "</span></td>";
+		echo "</tr>";
+		for($i=0; $i<$sizeArr; $i++)
+		{
+			$currBalance = $currBalance +  $resultsArray[$i]['TransactionAmt'];
 			echo "<tr>";
-			echo "<td>" . $row['Vendor']. "</td>";
-			echo "<td>" . $row['TransactionAmt']. "</td>";
+			echo "<td>" . $resultsArray[$i]['Vendor']. "</td>";
+			echo "<td>" . $resultsArray[$i]['TransactionAmt']. "</td>";
 			echo "<td>" . $currBalance . "</td>";
 			echo "</tr>";
 		}
+		echo "<tr>";
+		echo "<td></td>";
+		echo "<td><span style=\"font-weight:bold\">Current Balance:</span> </td>";
+		echo "<td><span style=\"font-weight:bold\">" . $currBalance . "</span></td>";
+		echo "</tr>";
 
 	}
 	
 ?>
-  <tr>
-    <td>Gas</td>
-    <td>-25.00</td>
-    <td>100.00</td>
-  </tr>
 </table>
 </fieldset> 
   

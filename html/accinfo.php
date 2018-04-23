@@ -51,15 +51,15 @@ tr:nth-child(even) {
   <br>
   First Name: 
   <input type="text" name="fname" value="<?php echo $_SESSION['USERDATA']['FirstName'];?>"></input> 
-  <br>
+  <br><br>
   Last Name: 
   <input type="text" name="lname" value="<?php echo $_SESSION['USERDATA']['LastName']; ?>"></input> 
-  <br>
+  <br><br>
   Email:
   <input type="text" name="email"  value ="<?php echo $_SESSION['USERDATA']['email']; ?>"></input> 
   <br><br>
   Street:
-  <input type="text"name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNum']; ?>"></input> 
+  <input type="text"name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNumber']; ?>"></input> 
   <input type="text"name="street" value="<?php echo $_SESSION['USERDATA']['Street']; ?>"></input> 
   <br><br>
   City:    

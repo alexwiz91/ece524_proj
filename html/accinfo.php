@@ -81,6 +81,7 @@ tr:nth-child(even) {
  </fieldset> 
 <input name="action" type="submit"  width="80px" height="30px" font-size="8px" value="Save" formaction="save_info.php"> </button>
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Cancel" formaction="save_info.php"> </button>
+<input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Delete Account" formaction="save_info.php"> </button>
 </form> 
 
 </body>

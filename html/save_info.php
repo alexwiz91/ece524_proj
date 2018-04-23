@@ -1,8 +1,8 @@
 <?php
 session_start();
+include "server_init.php";
 if($_POST['action'] == "Save")
 {
-	include "server_init.php";
 	echo "Saving Account information...";
 	$house = $_POST['housenumber'];
 	$street = $_POST['street'];	
@@ -31,6 +31,24 @@ else if($_POST['action'] == "Cancel")
 {
 	header('Location: mainpage.php');
 	exit();
+}
+else if($_POST['action'] == "Delete Account")
+{
+	header('Refresh: 5; URL=index.html');
+	$acc = $_POST['lblAcc'];
+	$sql_query = "use ece524_proj;";
+	$conn->query($sql_query);
+	$sql_query= "UPDATE UserInfo SET deactivated=1 where AccNum='" . $acc . "';";
+	$result = $conn->query($sql_query);
+	if($result)
+	{
+		echo "Your account has been deleted, logging out now....";
+	}
+	else
+	{
+		echo "problem deleting accont";
+	}
+	die();
 }
 else
 {

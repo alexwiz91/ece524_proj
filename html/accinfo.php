@@ -55,18 +55,18 @@ tr:nth-child(even) {
   Last Name: 
   <input type="text" name="lname" value="<?php echo $_SESSION['USERDATA']['LastName']; ?>"></input> 
   <br>
-  Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Email:
   <input type="text" name="email"  value ="<?php echo $_SESSION['USERDATA']['email']; ?>"></input> 
   <br><br>
   Street:
-  <input type="text" name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNumber']; ?>"></input> 
-  <input type="text" name="street" value="<?php echo $_SESSION['USERDATA']['Street']; ?>"></input> 
+  <input type="text"name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNum']; ?>"></input> 
+  <input type="text"name="street" value="<?php echo $_SESSION['USERDATA']['Street']; ?>"></input> 
   <br><br>
   City:    
-  <input type="text" name="city" value ="<?php echo $_SESSION['USERDATA']['City']; ?>"</input> 
+  <input type="text"name="city" value ="<?php echo $_SESSION['USERDATA']['City']; ?>"</input> 
   State: 
-  <input type="text" name="state" size = "3" value ="<?php echo $_SESSION['USERDATA']['State']; ?>"</input> 
-  <br>
+  <input type="text"name="state" size = "3" value ="<?php echo $_SESSION['USERDATA']['State']; ?>"</input> 
+  <br><br>
   Example Input Box:<br>
   <input type="text" name="rout">
   <br><br>  

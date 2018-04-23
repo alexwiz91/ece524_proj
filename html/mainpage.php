@@ -87,21 +87,28 @@ tr:nth-child(even) {
     <th>Amount</th> 
     <th>Balance</th>
   </tr>
-  <tr>
-    <td>Direct Deposit</td>
-    <td>500.00</td>
-    <td>571.00</td>
-  </tr> 
-  <tr>
-    <td>Starbucks coffee</td>
-    <td>-4.00</td>
-    <td>71.00</td>
-  </tr>
-  <tr>
-    <td>Grocery</td>
-    <td>-20.00</td>
-    <td>75.00</td>
-  </tr>
+<?php 
+	include "server_init.php";
+	$sql_query = "use ece524_proj;";
+	$conn->query($sql_query);
+	$sql_query = "SELECT * from Transactions where AccNum='" . $_SESSION['USERDATA']['AccNum'] . "';";
+	$result = $conn->query($sql_query);
+	$currBalance = $_SESSION['USERDATA']['checkingBalance'];
+	if($result->num_rows>0)
+	{
+		while($row = $result->fetch_assoc())
+		{
+			$currBalance = $currBalance + $row['TransactionAmt'];
+			echo "<tr>";
+			echo "<td>" . $row['Vendor']. "</td>";
+			echo "<td>" . $row['TransactionAmt']. "</td>";
+			echo "<td>" . $currBalance . "</td>";
+			echo "</tr>";
+		}
+
+	}
+	
+?>
   <tr>
     <td>Gas</td>
     <td>-25.00</td>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Create Username and Password</title>
 <style>
@@ -135,14 +136,20 @@ input[type=submit]:active {
     <div id="container">
     	<h2>Account Creation Form</h2>
         <form action="create_account.php" method="post">
+	<?php
+		if($_SESSION['DEACTIVATED'])
+		{
+			echo '<span style="color: green;">Create new password to reactivate account!</span><br>';
+		}
+	?>
             <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname">
+            <input type="text" id="firstname" name="firstname" value="<?php  if($_SESSION['DEACTIVATED']) echo $_SESSION['D_FNAME']; ?>">
 
             <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname">
+            <input type="text" id="lastname" name="lastname" value="<?php  if($_SESSION['DEACTIVATED']) echo $_SESSION['D_FNAME']; ?>">
 
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" value="<?php  if($_SESSION['DEACTIVATED']) { echo $_SESSION['D_USER']; $_SESSION['DEACTIVATED'] = 0; } ?>">
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">

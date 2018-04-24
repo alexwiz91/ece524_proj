@@ -1,0 +1,44 @@
+﻿AccNum,TransactionAmt,TransString,Vendor
+300061,-25.32,"High School Musical",Amazon
+300061,-500,"Ethereum Purchase",Coinbase
+300061,-35,Chromecast,Google
+300061,-212.53,Groceries,"Safeway Store"
+300062,-35.41,Gas,"Circle K"
+300062,-25.65,"Food and Drinks","Hotel Congress"
+300062,-120.56,"Utility Bills",TEP
+300062,-356,"Car Payment","Precision Toyota"
+300062,-25,"Museum and Arts","Desert Museum"
+300063,-15,Rides,"Pima County Fair"
+300063,-250,"ATM Withdrawal","Chase Bank"
+300063,-5,Parking,"UofA Meter"
+300063,-25.96,"Car Ride","Uber Inc."
+300063,-85,"Concert Ticket",Coachella
+300063,-62.53,Groceries,"Sam's Club"
+300063,-154.13,Groceries,"Asian Market"
+300064,22847.4,PayStub,"Company X"
+300064,-3.56,Coffee,Starbucks
+300064,-17.95,"Personal Care",Supercuts
+300064,-22.96,"Car Ride","Discount Cab"
+300064,-214.56,"Car Care","Brake Max"
+300064,-8.56,Restaurants,McDonalds
+300064,-43.21,Gas,QT
+300065,-32.81,Medical,"CVS Pharmacy"
+300065,-96.45,Groceries,Fry's
+300065,456,Deposit,Check
+300065,-9.84,Restaurants,"Chic Fil A"
+300065,-67.23,Clothing,Macys
+300065,-8.63,Tacos,"Nico's Taco"
+300066,-251.65,"Home and Garden",Lowe's
+300066,-65.23,Sports,"Dicks Sporting Goods"
+300066,-32.98,Groceris,"Trader's Joe"
+300066,-14.63,"Food and Drinks","Panda Express"
+300066,-63.12,Clothing,"Celestial LLC"
+300068,-48.31,Hardware,"Edward Dunn"
+300068,-6.25,"Chai Latte","Presta Coffee"
+300068,-78.65,Clothing,"Nordsterm Rack"
+300068,-38.15,"Lawn Care",Sears
+300068,-235.89,"Home ","Home Depot"
+300068,-35.96,Restaurants,"Texas Roadhouse"
+300069,-650,Home,"Sam Levitz"
+300069,-89.35,Clothing,Footlocker
+300069,-15,Movies,"Century Theatres"

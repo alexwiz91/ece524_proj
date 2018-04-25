@@ -5,6 +5,18 @@
 <html>
 <body>
 <style>
+#container {
+	width:100%;
+	text-align:center;
+}
+#container > div {
+	width: calc(100%/2);
+	display:inline-block;
+	vertical-align: top;
+	text-align:center;
+	margin=2%
+	padding=20px;
+}
 button {
     display: inline-block;
     height: 30px;
@@ -69,8 +81,15 @@ tr:nth-child(even) {
   Account No: 
   <label><?php echo $_SESSION['USERDATA']['AccNum']; ?></label> 
   <br><br>
-  Example Input Box:<br>
-  <input type="text" name="rout">
+  </fieldset>
+  <fieldset>
+  <legend style="font-family:sans-serif;">Money Transfer Options</legend>
+  <div>To Account Number:</div>
+  <div><input type="text" size="5" name="routAcc"></div>
+  <div>Amount:</div>
+  <div><input type="text" size="10" name="amt"></div>
+  <input action="transfer" name="transfer" type="submit" value="Submit Transfer" formaction="transfer.php" method="GET"></input>
+  </div>
 <!--  <br><br>  
   Available Checking Balance:
   <label><?php echo $_SESSION['USERDATA']['checkingBalance']; ?></label> 

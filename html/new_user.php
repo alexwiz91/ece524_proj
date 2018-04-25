@@ -137,9 +137,16 @@ input[type=submit]:active {
     	<h2>Account Creation Form</h2>
         <form action="create_account.php" method="post">
 	<?php
-		if($_SESSION['DEACTIVATED'])
+		if(isset($_SESSION['DEACTIVATED']))
 		{
-			echo '<span style="color: green;">Create new password to reactivate account!</span><br>';
+			if($_SESSION['DEACTIVATED'])
+			{
+				echo '<span style="color: green;">Create new password to reactivate account!</span><br>';
+			}
+		}
+		else
+		{
+			$_SESSION['DEACTIVATED'] = 0;
 		}
 	?>
             <label for="firstname">First Name:</label>
@@ -155,7 +162,7 @@ input[type=submit]:active {
             <input type="password" id="password" name="password">
             <div id="lower">
 		<input name="action" type="submit" value="Create User">
-		<input name="action" type="submit" value="Cancel">
+		<input name="action_cancel" type="submit" value="Cancel">
             </div><!--/ lower-->
     	</form>
     </div><!--/ container-->

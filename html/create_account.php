@@ -1,6 +1,6 @@
 
 <?PHP
-	if($_POST['action'] = "Cancel")
+	if($_POST['action_cancel'] == "Cancel")
 	{
 		header("Location: index.html");
 		exit();

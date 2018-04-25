@@ -134,7 +134,7 @@ input[type=submit]:active {
 
     <!-- Begin Page Content -->
     <div id="container">
-    	<h2>Account Creation Form</h2>
+    	<h2 align ="center" >Account Creation Form</h2>
         <form action="create_account.php" method="post">
 	<?php
 		if(isset($_SESSION['DEACTIVATED']))

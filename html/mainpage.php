@@ -73,6 +73,7 @@ tr:nth-child(even) {
   Hello 
   <label><?php echo $_SESSION['USERDATA']['FirstName'] . "!"; ?></label> 
 <button title="update account information" id="close-image" formaction="accinfo.php" method="post"><img src="img/settings.png"></button>
+<input type='submit' title="Logout" formaction="logout.php" value="Logout"></button>
   </span>
   <br>
   Account No: 

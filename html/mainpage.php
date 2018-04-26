@@ -56,7 +56,7 @@ tr:nth-child(even) {
 <fieldset>
   <legend style="font-family:sans-serif;">Account Information:</legend>
 
-<form style="font-family:sans-serif;" method="POST">
+<form style="font-family:sans-serif;" method="GET">
 <!--  Account Type:<br>
   <select style="font-family:sans-serif; name="aType">
      <option value="chk">Checkings</option>

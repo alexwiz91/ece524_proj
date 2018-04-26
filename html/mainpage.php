@@ -56,8 +56,8 @@ tr:nth-child(even) {
 <fieldset>
   <legend style="font-family:sans-serif;">Account Information:</legend>
 
-<form style="font-family:sans-serif;"action="/action_page.php">
-  Account Type:<br>
+<form style="font-family:sans-serif;" method="POST">
+<!--  Account Type:<br>
   <select style="font-family:sans-serif; name="aType">
      <option value="chk">Checkings</option>
      <option value="sav">Savings</option>
@@ -67,20 +67,17 @@ tr:nth-child(even) {
   
   <span>
   <input type="submit" value="Submit">  
-  </span>
+  </span> -->
   <span>
-<button id="close-image" formaction="accinfo.php" method="post"><img src="img/settings.png"></button>
+  <br>
+  Hello 
+  <label><?php echo $_SESSION['USERDATA']['FirstName'] . "!"; ?></label> 
+<button title="update account information" id="close-image" formaction="accinfo.php" method="post"><img src="img/settings.png"></button>
   </span>
-  <br><br>
-  First Name: 
-  <label><?php echo $_SESSION['USERDATA']['FirstName']; ?></label> 
-  <br><br>
-  Last Name: 
-  <label><?php echo $_SESSION['USERDATA']['LastName']; ?></label> 
-  <br><br>
+  <br>
   Account No: 
   <label><?php echo $_SESSION['USERDATA']['AccNum']; ?></label> 
-  <br><br>
+  <br>
   </fieldset>
   <fieldset>
   <legend style="font-family:sans-serif;">Money Transfer Options</legend>
@@ -89,6 +86,14 @@ tr:nth-child(even) {
   <div>Amount:</div>
   <div><input type="text" size="10" name="amt"></div>
   <input action="transfer" name="transfer" type="submit" value="Submit Transfer" formaction="transfer.php" method="GET"></input>
+  </div>
+  <div>External Routing Number:</div>
+  <div><input type="text" size="5" name="routingNum"></div>
+  <div>External Bank Account Number:</div>
+  <div><input type="text" size="10" name="eBankAcc"></div>
+  <div>Amount:</div>
+  <div><input type="text" size="10" name="extAmt"></div>
+  <input action="ext_transfer" name="ext_transfer" type="submit" value="Submit External" formaction="transfer.php" method="GET"></input>
   </div>
 <!--  <br><br>  
   Available Checking Balance:

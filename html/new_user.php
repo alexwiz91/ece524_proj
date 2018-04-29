@@ -144,10 +144,6 @@ input[type=submit]:active {
 				echo '<span style="color: green;">Create new password to reactivate account!</span><br>';
 			}
 		}
-		else
-		{
-			$_SESSION['DEACTIVATED'] = 0;
-		}
 	?>
             <label for="firstname">First Name:</label>
             <input type="text" id="firstname" name="firstname" value="<?php  if($_SESSION['DEACTIVATED']) echo $_SESSION['D_FNAME']; ?>">
@@ -156,7 +152,7 @@ input[type=submit]:active {
             <input type="text" id="lastname" name="lastname" value="<?php  if($_SESSION['DEACTIVATED']) echo $_SESSION['D_FNAME']; ?>">
 
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<?php  if($_SESSION['DEACTIVATED']) { echo $_SESSION['D_USER']; $_SESSION['DEACTIVATED'] = 0; } ?>">
+            <input type="text" id="username" name="username" value="<?php  if($_SESSION['DEACTIVATED']) { echo $_SESSION['D_USER']; } ?>">
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">

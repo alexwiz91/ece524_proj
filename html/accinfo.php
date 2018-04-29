@@ -5,6 +5,10 @@
 <html>
 <body>
 <style>
+img 
+{
+	image-orientation: from-image;
+}
 button {
     display: inline-block;
     height: 30px;
@@ -42,34 +46,33 @@ tr:nth-child(even) {
 }
 </style>
 <fieldset>
+<form style="font-family:sans-serif;" action="save_info.php" method="POST" enctype="multipart/form-data">
   <legend style="font-family:sans-serif;">Update Account Information:</legend>
-
-<form style="font-family:sans-serif;" action="save_info.php" method="post">
+  <?php $img_src=$_SESSION['USERDATA']['profilePicPath']; ?>
+  <img width='100' height='100' src="<?php echo $img_src ?>"></img>
+  <input type="file" id="profilePic" name="profilePic"></input><br>
   Account No: 
   <label name='acc'><?php echo $_SESSION['USERDATA']['AccNum']; ?></label> 
   <input type="hidden" name='lblAcc' value="<?php echo $_SESSION['USERDATA']['AccNum']; ?>"></input>
   <br>
   First Name: 
   <input type="text" name="fname" value="<?php echo $_SESSION['USERDATA']['FirstName'];?>"></input> 
-  <br><br>
+  <br>
   Last Name: 
   <input type="text" name="lname" value="<?php echo $_SESSION['USERDATA']['LastName']; ?>"></input> 
-  <br><br>
+  <br><br><br>
   Email:
   <input type="text" name="email"  value ="<?php echo $_SESSION['USERDATA']['email']; ?>"></input> 
-  <br><br>
+  <br>
   Street:
   <input type="text"name="housenumber" size ="6" value="<?php echo $_SESSION['USERDATA']['HouseNumber']; ?>"></input> 
   <input type="text"name="street" value="<?php echo $_SESSION['USERDATA']['Street']; ?>"></input> 
-  <br><br>
+  <br>
   City:    
   <input type="text"name="city" value ="<?php echo $_SESSION['USERDATA']['City']; ?>"</input> 
   State: 
   <input type="text"name="state" size = "3" value ="<?php echo $_SESSION['USERDATA']['State']; ?>"</input> 
   <br><br>
-  Example Input Box:<br>
-  <input type="text" name="rout">
-  <br><br>  
 <?php
 	if($_SESSION['updatedinfo'])
 	{
@@ -79,6 +82,11 @@ tr:nth-child(even) {
 ?>
 	
  </fieldset> 
+<fieldset style="font-family:sans-serif;" a>
+  <legend>Change Password</legend>
+  New Password:
+  <input type="password" name="pw" value="<?php echo $_SESSION['USERDATA']['password']; ?>"></input>
+</fieldset>
 <input name="action" type="submit"  width="80px" height="30px" font-size="8px" value="Save" formaction="save_info.php"> </button>
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Cancel" formaction="save_info.php"> </button>
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Delete Account" formaction="save_info.php"> </button>

@@ -9,6 +9,16 @@ img
 {
 	image-orientation: from-image;
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+}
+
 button {
     display: inline-block;
     height: 30px;
@@ -44,10 +54,36 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+#footer {
+   position:absolute;
+   bottom:0;
+   font-family:century gothic;
+   width:100%;
+   height:30px;   /* Height of the footer */
+   background:#acd6ef; ;
+}
+
+#header {
+   position:absolute;
+   top:0;
+   font-size:200%;
+   font-family:century gothic;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#acd6ef; ;
+}
+
 </style>
+<head>
+    <div id="header" align ="center">
+	       <header> ECE Federal Credit Union </header>
+   </div>
+<br><br><br><br>
+ 
 <fieldset>
-<form style="font-family:sans-serif;" action="save_info.php" method="POST" enctype="multipart/form-data">
   <legend style="font-family:sans-serif;">Update Account Information:</legend>
+  <form style="font-family:sans-serif;" action="save_info.php" method="POST" enctype="multipart/form-data">
   <?php $img_src=$_SESSION['USERDATA']['profilePicPath']; ?>
   <img width='100' height='100' src="<?php echo $img_src ?>"></img>
   <input type="file" id="profilePic" name="profilePic"></input><br>
@@ -92,5 +128,8 @@ tr:nth-child(even) {
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Delete Account" formaction="save_info.php"> </button>
 </form> 
 
+    <div id="footer" align ="center">
+	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
+   </div>
 </body>
 </html>

@@ -9,6 +9,16 @@
 	width:100%;
 	text-align:center;
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+}
+
 #container > div {
 	width: calc(100%/2);
 	display:inline-block;
@@ -52,7 +62,35 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+#footer {
+   position:absolute;
+   bottom:0;
+   font-family:century gothic;
+   width:100%;
+   height:30px;   /* Height of the footer */
+   background:#acd6ef; ;
+}
+
+#header {
+   position:absolute;
+   top:0;
+   font-size:200%;
+   font-family:century gothic;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#acd6ef; ;
+}
+
 </style>
+<head>
+
+    <div id="header" align ="center">
+	       <header> ECE Federal Credit Union </header>
+   </div>
+</head>
+<br><br><br><br>  
+   
 <fieldset>
   <legend style="font-family:sans-serif;">Account Information:</legend>
 
@@ -158,5 +196,9 @@ tr:nth-child(even) {
   
 </form> 
 
+    <div id="footer" align ="center">
+	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
+   </div>
 </body>
+
 </html>

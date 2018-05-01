@@ -127,9 +127,10 @@ tr:nth-child(even) {
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Cancel" formaction="save_info.php"> </button>
 <input name="action"  type="submit" width="80px" height="30px" font-size="8px" value="Delete Account" formaction="save_info.php"> </button>
 </form> 
-
+<head>
     <div id="footer" align ="center">
 	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
    </div>
+   <br><br><br><br>
 </body>
 </html>

@@ -196,9 +196,11 @@ tr:nth-child(even) {
   
 </form>
 
+<head>
     <div id="footer" align ="center">
 	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
    </div>
+   <br><br><br><br>
 </body>
 
 </html>

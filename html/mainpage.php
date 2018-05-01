@@ -193,13 +193,12 @@ tr:nth-child(even) {
 ?>
 </table>
 </fieldset> 
-    <div id="footer" align ="center">
-	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
-   </div>
   
 </form>
 
-
+    <div id="footer" align ="center">
+	       <footer> &copy; Copyright 2018 ECE524 TEAM1234</footer>
+   </div>
 </body>
 
 </html>
